@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Collections {
     /*
@@ -30,6 +28,24 @@ public class Collections {
 
         String[] names = {"Charles", "Muvaka", "Kata", "James", "Tabitha"};
         List<String> allNames = new ArrayList<>();
+        List<String> linkedNames = new LinkedList<>(); //Doesn't require a capacity initializer.
+
+        /*
+            Note linked list are fast in data manipulation, addition and deletion since they use double lists in storing elements.
+            The arrayList uses a dynamic array to store elements therefore shifting of elements occurs as you try to remove or add an element
+         */
+
+        linkedNames.add(names[0]);
+        linkedNames.add(names[1]);
+        linkedNames.add(names[2]);
+        linkedNames.add(names[3]);
+        linkedNames.add(names[4]);
+
+        ListIterator<String> l = linkedNames.listIterator();
+        while (l.hasNext()){
+            String name  = l.next();
+            System.out.println(name);
+        }
 
         allNames.add(names[0]);
         allNames.add(names[1]);
