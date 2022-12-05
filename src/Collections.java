@@ -53,8 +53,9 @@ public class Collections {
         linkedNames.add(names[4]);
 
         ListIterator<String> l = linkedNames.listIterator();
-        while (l.hasNext()){
+        if (l.hasNext()){
             String name  = l.next();
+            System.out.println(l.nextIndex());
             System.out.println(name);
         }
         l.set("Kalekye");
@@ -77,5 +78,20 @@ public class Collections {
             System.out.println(name);
         }
 
+        Stack<String> myNames = new Stack<>();
+        myNames.add(names[0]);
+        myNames.add(names[1]);
+
+        ListIterator<String> stackIterator = myNames.listIterator();
+        if (stackIterator.hasNext()){
+            myNames.push(names[2]);// push methods adds an element on top of the stack
+        }
+
+        for (String name: myNames) {
+            System.out.println(name);
+        }
+
+        String lastName = myNames.pop(); //pop method removes the last item in the stack
+        System.out.println(lastName);
     }
 }
