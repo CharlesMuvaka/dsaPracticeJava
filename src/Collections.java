@@ -9,6 +9,17 @@ public class Collections {
         1. hasNext() - returns true if their exists an element in front of the iterator cursor.
         2. next() - Returns the element after the iterator cursor.
         3. remove() - Removes the element in front of the iterator cursor.
+                    ListIterator
+         List iterator has the ability to traverse in both directions while an iterator only traverses in the forward direction.
+         Note the iterator interface can traverse through the entire java collections since the collection interface inherits from it.
+         A list iterator on the other hand can only traverse through the list interface. It contains additional methods such as
+            1. hasPrevious() - returns true if there is an element before the cursor of the iterator.
+            2. previous() - returns the last element before the cursor of the iterator.
+            3.nextIndex() - returns the index of the element after the iterator cursor.
+            4. previousIndex() -returns the index of the element before the cursor while traversing
+            5. set() - Used to replace the last element of the list. Depends on the usage though..
+
+            NOTE: iterator interface can only remove an element while the listIterator can both remove and add an element.
      */
 
     /*
@@ -45,6 +56,12 @@ public class Collections {
         while (l.hasNext()){
             String name  = l.next();
             System.out.println(name);
+        }
+        l.set("Kalekye");
+
+        for (int i = 0; i < linkedNames.size(); i++) {
+            System.out.println(linkedNames.get(i));
+
         }
 
         allNames.add(names[0]);
