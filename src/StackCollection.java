@@ -16,8 +16,11 @@ public class StackCollection {
 
         Stack<String> allNames = new Stack<>();
         allNames.push(names[0]);
+        allNames.push(names[1]);
 
-        System.out.println(allNames.peek());
+        String myName = allNames.pop();
+
+        System.out.println(myName);
 
 
     }
