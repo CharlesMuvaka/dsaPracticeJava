@@ -15,6 +15,9 @@ public class StackCollection {
         String[] names = {"Charles", "Muvaka", "Kata", "James", "Tabitha"};
 
         Stack<String> allNames = new Stack<>();
+        allNames.push(names[0]);
+
+        System.out.println(allNames.peek());
 
 
     }
